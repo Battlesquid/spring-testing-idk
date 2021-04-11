@@ -1,0 +1,54 @@
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+.application {
+    padding: 0.5em;
+}
+
+.application-header, .application-footer {
+    font-family: Calibri, sans-serif;
+    text-align: center;
+}
+
+.application-body {
+    margin: auto;
+}
+
+.items-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 150px);
+    grid-template-rows: auto;
+    justify-content: center;
+}
+
+.item-card {
+    position: relative;
+    box-sizing: border-box;
+    padding: 1em;
+    border: 1px solid #444;
+    width: 150px;
+    height: 200px;
+}
+
+.item-card .product-id::before {
+    content: "id: ";
+}
+
+.item-card .product-id {
+    font-size: 11px;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    color: #aaa;
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.item-card .product-name {
+    font-size: 18pt;
+    color: #000;
+    font-family: Calibri, sans-serif;
+}

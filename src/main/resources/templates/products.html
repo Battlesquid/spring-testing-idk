@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <title>pepeloni</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link th:href="@{/styles/products.css}" rel="stylesheet">
+</head>
+<body>
+<div class="application">
+    <div class="application-header">
+        <h2>Product Page</h2>
+        <h4>or sumn idk lol</h4>
+    </div>
+    <div class="application-body">
+        <div class="items-container">
+            <div class="item-card" th:each="item: ${items}">
+                <span class="product-id" th:text="${item.getId()}"/>
+                <span class="product-name" th:text="${item.getName()}"/>
+                <span class="product-price" th:text="${item.getPrice()}"/>
+            </div>
+        </div>
+    </div>
+    <div class="application-footer">
+        this is a footer ok what do you want
+    </div>
+
+</div>
+
+</body>
+</html>
